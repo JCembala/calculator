@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    margin: 20px 0 0 0;
+}
+
+.heading__main {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.calculator {
+    margin-top: 50px;
+}
+
+.calculator__display {
+    padding: 15px;
+    text-align: right;
+    background-color: lightblue;
+}
+
+.calculator__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 400px;
+}
+
+.calculator__button {
+    flex-basis: 20%;
+    padding: 15px;
+}
+
+.button__double {
+    flex-basis: 40%;
+}
+
+.footer__copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
