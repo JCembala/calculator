@@ -28,10 +28,12 @@ operators.forEach((operator) => {
 })
 
 equalBtn.addEventListener('click', () => {
-    result = getResult();
-    clearDisplay();
-    printToDisplay(result);
-    isClearNeeded = true;
+    if(firstNum) {
+        result = getResult();
+        clearDisplay();
+        printToDisplay(result);
+        isClearNeeded = true;
+    }
 })
 
 clearBtn.addEventListener('click', () => {
