@@ -39,8 +39,14 @@ clearBtn.addEventListener('click', () => {
 })
 
 backspaceBtn.addEventListener('click', () => {
-    //check if something is to delete
-    //if there is something then delete else dont
+    if(display.textContent.length > 1) {
+        tempString = display.textContent.slice(0, -1);
+        clearDisplay();
+        printToDisplay(tempString);
+    } 
+    else {
+        resetAll();
+    }
 })
 
 dotBtn.addEventListener('click', (e) => {
