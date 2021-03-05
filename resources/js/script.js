@@ -4,6 +4,7 @@ const display = document.getElementById("display");
 const equalBtn = document.getElementById("equal");
 const clearBtn = document.getElementById("clear");
 const backspaceBtn = document.getElementById("backspace");
+const dotBtn = document.getElementById("dot");
 
 let firstNum = 0;
 let operationSign = '';
@@ -40,6 +41,12 @@ clearBtn.addEventListener('click', () => {
 backspaceBtn.addEventListener('click', () => {
     //check if something is to delete
     //if there is something then delete else dont
+})
+
+dotBtn.addEventListener('click', (e) => {
+    if(display.textContent.indexOf(".") == -1) {
+        printToDisplay(e.target.textContent);
+    }
 })
 
 function resetAll() {
