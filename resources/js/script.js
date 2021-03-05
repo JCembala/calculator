@@ -119,8 +119,10 @@ function operate(operator, firstNum, secondNum) {
         break;
         
         case '/':
-        if(secondNum == 0) return null;
-        
+        if(secondNum == 0) {
+            alert("You shouldn't divide by 0!")
+            return 0;
+        }
         return divide(firstNum, secondNum);
         break;
         
