@@ -1,5 +1,22 @@
+:root {
+    --font: #D2D7DF;
+    --secondColor: #FFFFFF;
+    --buttons: #8f8e81;
+    --buttonsHover: #69695e;
+    --buttonsActive: #55544c;
+    --background: #353535;
+    --border: #252525;
+    --buttonClear: #b30802;
+    --buttonClearHover: #A10702;
+    --buttonClearActive: #7c0501;
+    --buttonEqual: #2e5186;
+    --buttonEqualHover: #26436e;
+    --buttonEqualActive: #1a2e4d;
+}
+
 html {
     box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 *, *::after, *::before {
@@ -23,28 +40,78 @@ html {
 
 .calculator {
     margin-top: 50px;
+    padding: 15px;
+    font-size: 1.6em;
+    background-color: var(--background);
+    border: 2px var(--border) solid;
+    border-radius: 1em;
+}
+
+.calculator__display, .calculator__button {
+    background-color: var(--buttons);
+    color: var(--font);
+    border-color: var(--buttons);
 }
 
 .calculator__display {
     padding: 15px;
+    margin-bottom: 5px;
     text-align: right;
-    background-color: lightblue;
+    border: 2px var(--border) solid;
+    border-radius: 1em;
 }
 
 .calculator__buttons {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 400px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .calculator__button {
-    flex-basis: 20%;
-    padding: 15px;
+    padding: 20px;
+    border: 2px var(--border) solid;
+    border-radius: 1em;
+    box-shadow: none;
+    outline: none;
 }
 
-.button__double {
-    flex-basis: 40%;
+.calculator__button:hover {
+    background-color: var(--buttonsHover);
+} 
+
+.calculator__button:active {
+    background-color: var(--buttonsActive);
 }
+
+.button__span2 {
+    grid-column: span 2;
+}
+
+#clear {
+    background-color: var(--buttonClear);
+}
+
+#equal {
+    background-color: var(--buttonEqual);
+}
+
+#clear:hover {
+    background-color: var(--buttonClearHover);
+}
+
+#equal:hover {
+    background-color: var(--buttonEqualHover);
+}
+
+#clear:active {
+    background-color: var(--buttonClearActive);
+}
+
+#equal:active {
+    background-color: var(--buttonEqualActive);
+}
+
+
 
 .footer__copyright {
     position: absolute;
